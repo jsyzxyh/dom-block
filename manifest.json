@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Dom Block",
+  "description": "屏幕元素",
+  "version": "1.0",
+  "icons": {
+		"16": "img/block.png",
+    "48": "img/block.png",
+		"128": "img/block.png"
+	},
+  "content_scripts": [
+    {
+      "matches": ["*://*.baidu.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
