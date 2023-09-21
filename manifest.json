@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Dom Block",
-  "description": "屏幕元素",
+  "description": "屏蔽页面中的广告dom",
   "version": "1.0",
   "icons": {
 		"16": "img/block.png",
@@ -11,7 +11,11 @@
   "content_scripts": [
     {
       "matches": ["*://*.baidu.com/*"],
-      "js": ["content.js"]
+      "js": ["./blockjs/utils.js", "./blockjs/baidu.js"]
+    },
+    {
+      "matches": ["*://*.csdn.net/*"],
+      "js": ["./blockjs/utils.js", "./blockjs/csdn.js"]
     }
   ]
 }
